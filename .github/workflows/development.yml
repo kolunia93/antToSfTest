@@ -20,7 +20,9 @@ jobs:
         SFDC_TOKEN: "test"
         SFDC_SERVERURL: "https://login.salesforce.com/"
       run: |
-        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.,
-        ant –version ,
-        echo "Running test deploy against QA environment"
+        echo test1
+        echo test2
+        ant –version 
+        echo test3
+        echo Running test deploy against QA environment
         ant -buildfile .github\workflows\build\build.xml checkDeploy -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
