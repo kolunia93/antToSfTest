@@ -2,10 +2,10 @@ name: Test deployment to QA
 on:
   push:
     branches: 
-    - development2 
+    - development 
   pull_request:
     branches:
-     - development2 
+     - development 
   workflow_dispatch:
 
 jobs:
