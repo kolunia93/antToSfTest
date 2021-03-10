@@ -22,5 +22,5 @@ jobs:
       run: |
 
         echo "Running test deploy against QA environment"
-        ant -buildfile /build.xml checkDeploy -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+        ant -buildfile build.xml checkDeploy -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
         echo "END"
