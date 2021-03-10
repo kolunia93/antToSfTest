@@ -19,7 +19,11 @@ test 333
 =======
 
 test 2
+<<<<<<< HEAD
+
+=======
 >>>>>>> 387ffafdb128d12aae01f13b8d1587f1caccf8c2
+>>>>>>> d4a35ddc32ca2ebe15ede27a9e8af43edba175e0
     <aura:attribute name="name" type="String" access="public" description="id of component" default="{!globalId}"/>
     <aura:attribute name="class" type="String" access="public" required="false" description="class"/>
     <aura:attribute name="sObjectName" type="String" access="public" required="false" description="Name of the sObjectName to gather records from"/>
