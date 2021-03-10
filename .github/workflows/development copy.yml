@@ -1,0 +1,30 @@
+name: Test deployment to QA
+on:
+  push:
+    branches: 
+    - development2 
+  pull_request:
+    branches:
+     - development2 
+  workflow_dispatch:
+
+jobs:
+  my-job:
+    name: Test deployment to QA
+    runs-on: ubuntu-latest
+
+    
+    steps:
+    - name: Test deployment to QA
+      env:
+        SFDC_USERNAME: "TEST"
+        SFDC_PASS: "TEST"
+        SFDC_TOKEN: "test"
+        SFDC_SERVERURL: "https://login.salesforce.com/"
+      run: |
+        echo test1
+        echo test2
+        ant –version 
+        echo test3
+        echo Running test deploy against QA environment
+        ant -buildfile .github\workflows\build\build.xml checkDeploy -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
