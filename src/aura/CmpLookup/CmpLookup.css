@@ -1,0 +1,63 @@
+/*
+Copyright 2017 OpFocus, Inc
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.THIS .lookup {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width:100%;
+    min-width: 100%;
+}
+
+.THIS.lookupDropdown .slds-input__icon-group_right .slds-input__icon_right,
+.THIS.lookupDropdown .slds-input__icon-group_right .slds-input__icon--right{
+    right: 1rem;
+}
+
+.THIS .alignButton{
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    z-index: 10;
+}
+
+
+.THIS .slds-dropdown {
+    width:100%;
+    max-width:100%;
+    margin-top: -.5rem;
+    overflow: auto;
+    max-height: 300px;
+}
+
+.THIS .slds-input::-ms-clear {
+    display: none; width : 0; height: 0;
+}
+.THIS .slds-input::-ms-reveal {
+    display: none;
+    width : 0;
+    height: 0;
+}
+.THIS .slds-input::-webkit-search-decoration,
+.THIS .slds-input::-webkit-search-cancel-button,
+.THIS .slds-input::-webkit-search-results-button,
+.THIS .slds-input::-webkit-search-results-decoration {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.THIS .slds-form-element__label {
+    /*padding-top: 15px;*/
+}
