@@ -15,7 +15,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
 <aura:component controller="CmpLookupCtrl">
 
-test
+test 2
     <aura:attribute name="name" type="String" access="public" description="id of component" default="{!globalId}"/>
     <aura:attribute name="class" type="String" access="public" required="false" description="class"/>
     <aura:attribute name="sObjectName" type="String" access="public" required="false" description="Name of the sObjectName to gather records from"/>
