@@ -9,14 +9,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  my-job:
+    name: Test deployment to QA
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-      - name: Build with Ant
-        run: ant -noinput -buildfile build.xml
+    - name: Test deployment to QA
+      env:
+        SFDC_USERNAME: "TEST"
+        SFDC_PASS: "TEST"
+        SFDC_TOKEN: "test"
+        SFDC_SERVERURL: "https://login.salesforce.com/"
+      run: |
+
+        echo "Running test deploy against QA environment"
+        ant -buildfile /build.xml checkDeploy -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+        echo "END"
