@@ -22,7 +22,7 @@ jobs:
         env:
           SERVER: development
           USER_NAME: ${{ secrets.TEST}}
-          PASSWORD: ${{ secrets.TEST}}
+          PASSWORD: ${{ env.GITHUB_PASSWORD}}
 
         run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com/'
         
