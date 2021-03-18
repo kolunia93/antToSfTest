@@ -21,8 +21,8 @@ jobs:
       - name: Build with Ant
         env:
           SERVER: development
-          USER_NAME: ${{ env.USER_NAME}}
-          PASSWORD: ${{ env.PASSWORD}}
+          USER_NAME: ${{ secrets.TEST}}
+          PASSWORD: ${{ secrets.PASSWORD}}
 
         run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://login.salesforce.com'
         
