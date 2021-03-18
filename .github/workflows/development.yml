@@ -22,5 +22,5 @@ jobs:
         env:
           SERVER: development
 
-        run: echo "Hello $USER_NAME + ${{ env.PASSWORD}}, today is Monday!",
+        run: echo "Hello $USER_NAME + ${{ secrets.TEST}}, today is Monday!",
         
