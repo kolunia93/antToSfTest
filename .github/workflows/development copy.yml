@@ -28,3 +28,6 @@ jobs:
         echo test3
         echo Running test deploy against QA environment
         ant -buildfile .github\workflows\build\build.xml checkDeploy -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+
+
+ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://login.salesforce.com'
