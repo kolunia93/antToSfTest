@@ -21,7 +21,7 @@ jobs:
       - name: Build with Ant
         env:
           SERVER: development
-          USER_NAME: ${{ env.PASSWORD}}
+          USER_NAME: ${{ env.development.PASSWORD}}
 
         run: echo "Hello $USER_NAME + ${{ secrets.TEST}}, today is Monday!",
         
