@@ -18,5 +18,5 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Ant
-        run: echo "Hello $USER_NAME $middle_name $PASSWORD, today is Monday!"
+        run: echo "Hello $USER_NAME $middle_name $PASSWORD, today is Monday!",
         ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://login.salesforce.com'
