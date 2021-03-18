@@ -18,4 +18,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Ant
-        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl=https://login.salesforce.com/
+        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://login.salesforce.com'
