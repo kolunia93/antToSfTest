@@ -24,5 +24,5 @@ jobs:
           USER_NAME: ${{ secrets.TEST}}
           PASSWORD: ${{ secrets.TEST}}
 
-        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://login.salesforce.com'
+        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com/'
         
