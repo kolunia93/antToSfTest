@@ -21,7 +21,8 @@ jobs:
       - name: Build with Ant
         env:
           SERVER: development
-          USER_NAME: ${{ env.GITHUB_PASSWORD}}
+          USER_NAME: ${{ env.USER_NAME}}
+          PASSWORD: ${{ env.PASSWORD}}
 
-        run: echo "Hello $USER_NAME + ${{ secrets.TEST}}, today is Monday!",
+        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://login.salesforce.com'
         
