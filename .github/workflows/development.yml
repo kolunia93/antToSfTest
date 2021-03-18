@@ -3,10 +3,13 @@ on:
   push:
     branches: 
     - development 
+
   pull_request:
     branches:
      - development 
-
+env:
+  environment: development
+  
 jobs:
   build:
 
