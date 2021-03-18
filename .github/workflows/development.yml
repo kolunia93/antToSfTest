@@ -20,7 +20,7 @@ jobs:
           java-version: 1.8
       - name: Build with Ant
         env:
-          USER_NAME: ${{ secrets.TEST}}
+          SERVER: development
 
         run: echo "Hello $USER_NAME + ${{ env.PASSWORD}}, today is Monday!",
         
