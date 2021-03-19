@@ -9,7 +9,7 @@ on:
      - development 
 
 jobs:
-  build:
+  development:
 
     runs-on: ubuntu-latest
     steps:
@@ -20,11 +20,10 @@ jobs:
           java-version: 1.8
       - name: Build with Ant
         env:
-          SERVER: development
-          USER_NAME: ${{ env.USER_NAME}}
+          USER_NAME: ${{ toJson(USER_NAME) }}
           PASSWORD: ${{ env.PASSWORD}}
 
 
-        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com/'
+        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com//'
         
         
