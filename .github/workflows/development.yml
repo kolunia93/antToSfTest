@@ -22,8 +22,9 @@ jobs:
         env:
           my_env_var: $USER_NAME
           PASSWORD: $PASSWORD
+          SECURITY_TOKEN: $SECURITY_TOKEN
 
 
-        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$my_env_var -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com//'
+        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$my_env_var -Dsfdc.password=$PASSWORD$SECURITY_TOKEN -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com//'
         
         
