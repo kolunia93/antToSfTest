@@ -23,8 +23,8 @@ jobs:
           SERVER: development
           USER_NAME: ${{ env.USER_NAME}}
           PASSWORD: ${{ env.PASSWORD}}
-          
 
-        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=${Env:USER_NAME} -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com//'
+
+        run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com//'
         
         
