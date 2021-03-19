@@ -20,7 +20,7 @@ jobs:
           java-version: 1.8
       - name: Build with Ant
         env:
-          my_env_var: ${{ env.development }}
+          my_env_var: ${{ env.PASSWORD }}
           PASSWORD: ${{ env.PASSWORD}}
 
 
