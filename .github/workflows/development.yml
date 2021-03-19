@@ -20,9 +20,9 @@ jobs:
           java-version: 1.8
       - name: Build with Ant
         env:
-          my_env_var: $USER_NAME
-          PASSWORD: $PASSWORD
-          SECURITY_TOKEN: $SECURITY_TOKEN
+          my_env_var: mvakulich@peeklogic.com.dev
+          PASSWORD: Kolunia93
+          SECURITY_TOKEN: U3e6ewzsRz6y0iQNsKV6G49TP
 
 
         run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$my_env_var -Dsfdc.password=$PASSWORD$SECURITY_TOKEN -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com'
