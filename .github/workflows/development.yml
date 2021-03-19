@@ -19,7 +19,10 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Ant
-
+        env:
+          USER_NAME: test
+          PASSWORD: test
+          SECURITY_TOKEN: test
 
         run: ant -buildfile build/build.xml  checkDeploy -Dsfdc.username=$USER_NAME -Dsfdc.password=$PASSWORD$SECURITY_TOKEN -Dsfdc.serverurl='https://mycustomdevdomain-dev-ed.my.salesforce.com'
         
