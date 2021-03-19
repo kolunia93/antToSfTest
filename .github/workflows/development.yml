@@ -20,7 +20,7 @@ jobs:
           java-version: 1.8
       - name: Build with Ant
         env:
-          USER_NAME: ${{ toJson(USER_NAME) }}
+          USER_NAME: ${{ env.development.PASSWORD }}
           PASSWORD: ${{ env.PASSWORD}}
 
 
